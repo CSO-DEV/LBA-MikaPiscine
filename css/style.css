@@ -1,0 +1,226 @@
+/*-----------------------------------------------*/
+/* 	Bloc 1 : bandeau principal*/
+
+/* 	Marge exterieure nulle pour l'ensemble de la page
+	Marge interne Gauche/droite*/
+body {
+	margin: 0;
+	padding: 0 40px 0 40px;
+	font-family: 'Roboto', sans-serif;
+}
+/* 	Couleur du bloc en bleu clair
+	Police de caractère importé
+	marge interne pour affichage du contenu du bloc*/
+.top {
+	background-color: #b1dde8;
+	padding : 10px 50px ;
+}
+/* 	Mise en forme des liens :
+	pas de souligné et couleur blanche*/
+.top a:link {
+	color: white;
+	text-decoration: none;
+}
+/* 	dimension des images : obkigatoire pour les fichiers svg*/
+.image_top {
+	width: 25px;
+	height: 25px;
+}
+/*-----------------------------------------------*/
+/* 	Bloc 2 : Menu responsive*/
+		/* passage du bloc nav en flex pour aligner le menu et le burger*/
+		.navig_haut {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+		}
+		/* Passage du bloc ul en flex pour passer les lignes de menu
+		à l'horizontal*/
+		nav ul{
+			display: flex;
+		}
+		/* Mise en page de la liste horizontale sans puces*/		
+		nav li{
+			padding: 10px;
+			list-style: none;
+		}
+		/* Mise en page des liens : pas de soulignement, majuscule*/
+		nav a{
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+		/*Effacement du berger*/		
+		#burger {
+			display: none;
+		}
+		/* procédure d'adaptation de l'affichage du menu suivant
+		la largeur de l'écran*/
+		@media only screen and (max-width: 640px) {
+			/* Affichage de la liste en vertical avec la classe de la 
+			variable bloc créée dans le script*/
+			.afficher{
+			display: block;
+			}	
+			/*Affichage du burger avec des dimentions : svg obkige*/
+			#burger {
+				width: 30px;
+				height: 30px;
+				display: block;
+			}
+			/*Effacement de l'ul horizontal*/
+			nav ul{
+				display: none;
+			}
+		}
+/*-----------------------------------------------*/
+/*Bloc 3 : image centrale*/
+/* Intégration de l'image centrale et constitution
+d'un bloc contener en relative*/
+header {
+	background-image: url(../img/mika-piscines.jpg);
+	background-position: center,center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 500px;
+	position: relative;
+}
+/* Mise en page du titre principal et postion absolu*/
+header h1 {
+	color: white;
+	font-size: 10px;
+	text-transform: uppercase;
+	position: absolute;
+	top: 35%;
+	right: 5px;
+	letter-spacing: 0.3em;
+}
+/* Augmentation de la police de caractère au milieu 
+du titre*/
+.Ecriture1 {
+	font-size:20px;
+}
+/* Positionnement du logo sur l'image principal*/
+header img {
+	position: absolute;
+	top:35%;
+	left: -40px;
+}
+/*-----------------------------------------------*/
+/*Bloc 4 : nos services*/
+/*Alignement centré du bloc contenant l'ensemble des
+textes*/
+#service_titre {
+	text-align: center;
+}
+/*Mise en forme du titre principal du bloc*/
+#service_titre h4 {
+	text-transform: uppercase;
+}
+/*mise en place d'un bloc conteneur alignement horizontal
+responsive : passage des blocs au niveau iférieur à la réduction
+de la page et espace distribué*/
+#service_blocs {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+/*mise en forme titre des blocs  */
+.titre_bloc {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1rem;
+}
+/*mise en forme du contenu des blocs */
+#bloc1, #bloc2, #bloc3 {
+	background-color: #b1dde8;
+	text-align: center;
+	font-size: 0.9rem;
+	width: 330px;
+	height: 210px;
+	margin: 10px;
+	padding: 20px;
+}
+/*-----------------------------------------------*/
+/*Bloc 5 - Nos réalisation*/
+/*Alignement centré du bloc contenant l'ensemble des
+textes*/
+#rea_titre {
+	text-align: center;
+}
+/*Mise en forme du titre principal du bloc*/
+#rea_titre h4 {
+	text-transform: uppercase;
+}
+/*Bloc 5A - Nos réalisation - Menu*/
+/*création du conteneur flex, centré avec mise à la 
+ligne des blocs en responsive*/
+.list_photo ul {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+/*Mise en forme des liste : pas de puce et 
+contour de texte*/
+.list_photo li{
+	list-style: none;
+	padding: 10px 1px 10px 1px;
+}
+/*Mise en forme des liens : pas de soulignement,
+couleur, majuscule, marge interne*/
+.list_photo a {
+	color: black;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 10px;
+}
+/*Mise en forme au passage de la souris*/
+.list_photo a:hover {
+	background-color: #b1dde8;
+	color: white;
+}
+/*Mise en forme du 1er item*/
+#photos {
+	background-color: #b1dde8;
+	color: white;
+}
+/*-----------------------------------------------*/
+/*Bloc 5B - Nos réalisation - galerie photo*/
+/*Déclaration du bloc conteneur photo*/
+.compil_photo {
+	display: flex;
+	flex-wrap: wrap;
+}
+/*Forçage de la taille du bloc contenant l'image en grand écran*/
+.compil_photo div {
+	width: 25%;
+}
+/*Forçage de l'image à la dimension de son contenu + block pour enlever le blanc contenu dans le bloc*/
+.compil_photo img {
+	max-width: 100%;
+	display: block;
+	}
+/*Forçage de la taille du bloc contenant l'image en moyen écran*/
+@media only screen and (max-width: 900px) {
+	.compil_photo div {
+		width: 50%;
+	}
+}
+/*Forçage de la taille du bloc contenant l'image en petit écran*/
+@media only screen and (max-width: 640px) {
+	.compil_photo div {
+		width: 100%;
+	}
+}
+/*-----------------------------------------------*/
+/*Bloc 6 - Nos réalisation - galerie photo*/
+.ta-centrer {
+	text-align: center;
+}
+/*-----------------------------------------------*/
+/*Bloc 7 - Pieds de page*/
+footer p {
+	background-color: #b1dde8;
+	padding: 10px;
+	text-align: center;
+	color: #ffff
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Piscine</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta charset="utf-8">
+	<style type="text/css">
+
+
+	</style>
+</head>
+<body>
+	<section class="top">
+			<img src="img/tel.svg" class="image_top" />
+			<a href="tel:06.06.06.06.06">06.06.06.06.06</a>
+			<img src="img/email.svg" class="image_top"/>
+			<a href="mailto:monSite@gmail.com">monSite@gmail.com</a>
+	</section>
+	<nav class="navig_haut">
+		<ul id="menu_navigation">
+			<li><a href="#">Qui sommes nous ?</a></li>
+			<li><a href="#">Service</a></li>
+			<li><a href="#">Réalisations</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+			<a id="burger" href="#"><img src="img/bars-solid.svg"/></a>
+	</nav>
+	<header>
+		<h1 id="titre">
+			<span>Spécialiste de la</span>
+			<br><span class="Ecriture1">rénovation de piscines</span>
+			<br><span>de Nice à Mandelieu</span>
+		</h1>
+			<img id="logo" src="img/mika-piscines.svg">
+	</header>
+	<div id="service_titre">
+		<h4>Nos services</h4>
+		<p>Nous intervenons de Nice à Mandelieu</p>
+		<P>
+			Spécialisé dans l'entretien et le dépannage de vos piscines, Mika Piscines est fort d'une équipe jeune, dynamique et réactive. Détenteur d'un diplôme BP piscinier, Mika vous propose des prestations de confiance pour les particuliers et copropriétés. Nous rénovons vos bassins, qu'ils soient en mosaïque, résine polyester, membrane pvc armé ou en carrelage. Nous intervenons dans les Alpes-Maritimes, de Mandelieu à Nice. Nous proposons des contrats d’entretien annuel pour particuliers ou copropriétés, nous proposons également une gamme complète de produits et accessoires piscine. Nous réalisons toutes sortes de travaux d'embellissement, comme la construction de votre pool-house, de marches, ou la reprise du débordement ainsi que la création intégrale du groupe de filtration piscine.
+		</P>
+	</div>
+	<br>
+	<section id="service_blocs">
+		<div id="bloc1">
+			<span class="titre_bloc">Rénovation</span>
+			<p>Rénovation de piscines et bassins</p>	
+			<p>	Piscine en mosaïque</p>
+			<p>	Piscine en résine polyester</p>
+			<p>	Piscine en membrane PVC</p>
+			<p>	Piscine en carrelage</p>
+		</div>
+		<div id="bloc2">
+			<span class="titre_bloc">Embellissement</span>
+			<p>Travaux d’embellissement de votre piscine</p>
+			<p>Construction du pool-house</p>
+			<p>Construction de marches</p>
+			<p>Reprise du débordement</p>
+			<p>Création du groupe de filtration</p>
+		</div>
+		<div id="bloc3">
+			<span class="titre_bloc">Entretien</span>
+			<p>Contrats d’entretien de votre piscine</p>
+			<p>Pour les particuliers</p>
+			<p>Pour les copropriétés</p>
+			<p>Accessoires de piscine et produits d’entretien pour votre piscine</p>
+		</div>
+	</section>
+	<br>
+	<div id="rea_titre">
+		<h4>Nos réalisations</h4>
+		<p>Nos dernières rénovations de piscines</p>
+	</div>
+	<nav class="list_photo">
+		<ul>
+			<li>
+				<a href ="#" id="photos" title="12">Toutes</a></li>
+			<li><a href ="#" id="photo1" title="05">Résine</a></li>
+			<li><a href ="#" id="photo2" title="10">PVC</a></li>
+			<li><a href ="#" id="photo3" title="08">Mosaïque</a></li>
+			<li><a href ="#" id="photo4" title="05">Carrelage</a></li>
+			<li><a href ="#" id="photo5" title="06">Pool-house</a></li>
+		</ul>
+	</nav>
+	<br>
+	<section class="compil_photo">
+		<div><img src="img/piscines/mika-piscines-1.jpg" /></div>
+		<div><img src="img/piscines/mika-piscines-2.jpg" /></div>
+		<div><img src="img/piscines/mika-piscines-3.jpg" /></div>
+		<div><img src="img/piscines/mika-piscines-4.jpg" /></div>
+		<div><img src="img/piscines/mika-piscines-5.jpg" /></div>
+		<div><img src="img/piscines/mika-piscines-6.jpg" /></div>
+		<div><img src="img/piscines/mika-piscines-7.jpg" /></div>
+		<div><img src="img/piscines/mika-piscines-8.jpg" /></div>
+		<div><img src="img/piscines/mika-piscines-9.jpg" /></div>
+	</section>
+	<br>
+	<section id="contacts" class="ta-centrer">
+		<h4>Contactez-nous pour vos demandes concernant l’entretien ou la rénovation de votre piscine</h4>
+		<p> MIKA PISCINES<br>
+			341 avenue Georges Pompidou<br>
+			Les Cottages<br>
+			06110 LE CANNET<br>
+			Tél : 06.59.85.18.98<br>
+			Mail : mika.piscines@gmail.com</p>
+	</div>	
+	</section>
+	<footer>
+		<p>Copyright © Mika-piscines.fr</p>
+	</footer>
+</body>
+
+<script type="text/javascript">
+	// récupère l'id du burger dans une variable
+	var lienmenu = document.getElementById("burger");
+	// création d'une action sur click, lancement d'une fonction
+	lienmenu.addEventListener("click", menumobile);
+	//création d'une fonction qui crée une classe sur l'id de l'ul
+	//menu_navigation qui sera utilisé en css pour afficher ou pas la liste
+	function menumobile(){
+	var bloc = document.getElementById("menu_navigation");
+	//toggle : bascule affichage ou non
+	bloc.classList.toggle("afficher");
+	}
+</script>
+
+</html>
